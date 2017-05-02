@@ -8,6 +8,7 @@
 
 var fs = require('fs');
 var gulp = require('gulp');
+var icons = require('glyphicons');
 
 /**
  *  This will load all js or coffee files in the gulp directory

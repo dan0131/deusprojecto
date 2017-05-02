@@ -2,6 +2,7 @@
 
 var path = require('path');
 var conf = require('./gulp/conf');
+var icons = require('glyphicons');
 
 var _ = require('lodash');
 var wiredep = require('wiredep');
