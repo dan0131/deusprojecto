@@ -1,8 +1,9 @@
 export class AdduserController {
-constructor ($timeout, webDevTec, toastr, $http) {
+constructor ($timeout, webDevTec, toastr, $http, $auth) {
     'ngInject';
     this.$http=$http;
     this.getUsers();
+    this.$auth=$auth;
 }
 
     getUsers(){
@@ -14,6 +15,16 @@ constructor ($timeout, webDevTec, toastr, $http) {
     }
 
     postUser(){
-      this.$http.post('http://localhost:5000/api/user', {firstname:this.firstname,lastname:this.lastname ,username:this.username, password:this.pwd, empType:this.empType});
-    }
+      this.$http.post('http://localhost:5000/api/user', {
+        firstname:this.firstname,
+        lastname:this.lastname,
+        username:this.username, 
+        password:this.pwd, 
+        empType:this.empType}); 
+ }
+
+ register(){
+  this.$auth.signup({firstname:'hama'});
+
+ }
 }

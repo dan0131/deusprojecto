@@ -30,6 +30,12 @@ export function routerConfig($stateProvider, $urlRouterProvider) {
       templateUrl: 'app/adduser/adduser.html',
       controller: 'AdduserController',
       controllerAs: 'adduser'
+    })
+    .state('issuedrugs', {
+      url: '/issuedrugs',
+      templateUrl: 'app/issuedrugs/issuedrugs.html',
+      controller: 'IssueDrugController',
+      controllerAs: 'issuedrugs'
     });
 
   $urlRouterProvider.otherwise('/');

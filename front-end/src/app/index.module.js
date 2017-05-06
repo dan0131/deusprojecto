@@ -8,6 +8,7 @@ import { DashboardController } from './dashboard/dashboard.controller';
 import { InventryController } from './inventry/inventry.controller';
 import { PatientController } from './patient/patient.controller';
 import { AdduserController } from './adduser/adduser.controller';
+import { IssueDrugController } from './issuedrugs/issuedrugs.controller';
 import { CompareToDirective } from './directives/compareTo.directive';
 import { GithubContributorService } from '../app/components/githubContributor/githubContributor.service';
 import { WebDevTecService } from '../app/components/webDevTec/webDevTec.service';
@@ -26,6 +27,7 @@ angular.module('pharmacyFront', ['ngAnimate', 'ngCookies', 'ngTouch', 'ngSanitiz
   .controller('MainController', MainController)
   .controller('DashboardController', DashboardController)
   .controller('InventryController', InventryController)
+  .controller('IssueDrugController', IssueDrugController)
   .controller('PatientController', PatientController)
   .controller('AdduserController', AdduserController)
   .directive('acmeNavbar', NavbarDirective)

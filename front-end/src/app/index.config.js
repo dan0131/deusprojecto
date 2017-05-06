@@ -10,5 +10,5 @@ export function config ($logProvider, toastrConfig, $authProvider, API_URL) {
   toastrConfig.preventDuplicates = true;
   toastrConfig.progressBar = true;
 
-  $authProvider.signupUrl='';
+  $authProvider.signupUrl=API_URL+'adduser/register';
 }
