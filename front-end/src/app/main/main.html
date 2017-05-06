@@ -1,51 +1,59 @@
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+
 <div class="container">
+  <div class="row">
+    <div class="col-sm-12 col-lg-3 col-md-2">
+    </div>
+    <div class="col-sm-12 col-lg-6 col-md-8">
+      <div class="panel panel-success">
+        <div class="panel-heading">WELCOME BACK!</div>
+        <div class="panel-body">
+          <form class="form-horizontal">
+            <fieldset>
 
-  <div>
-    <acme-navbar creation-date="main.creationDate"></acme-navbar>
-  </div>
-  <div class="col-md-12">
-    <div class="panel panel-primary">
-      <div class="panel-heading">SEARCH</div>
-      <div class="panel-body">
-        <div class="input-group">
-          <input type="text" class="form-control custom-control" style="resize: none">
-          <span class="input-group-addon btn btn-primary">SEARCH</span>
+              <!-- Form Name -->
+              <legend>Login Here</legend>
 
+              <!-- Text input-->
+              <div class="form-group">
+                <label class="col-md-4 control-label" for="textinput">Username:</label>
+                <div class="col-md-4">
+                  <input id="textinput" name="textinput" type="text" placeholder="Username" class="form-control input-md" required="">
+
+                </div>
+              </div>
+
+              <!-- Password input-->
+              <div class="form-group">
+                <label class="col-md-4 control-label" for="passwordinput">Password:</label>
+                <div class="col-md-4">
+                  <input id="passwordinput" name="passwordinput" type="password" placeholder="Password" class="form-control input-md" required="">
+
+                </div>
+              </div>
+
+              <!-- Button (Double) -->
+              <div class="form-group">
+                <label class="col-md-4 control-label" for="button1id"></label>
+                <div class="col-md-4">
+                  <button id="button1id" name="button1id" class="btn btn-success" ng-click="main.LogIn()">Sign in</button>
+                  <button id="button2id" name="button2id" class="btn btn-info" ng-click="main.clearPage()">Clear</button>
+                </div>
+              </div>
+
+            </fieldset>
+          </form>
         </div>
       </div>
     </div>
-  </div>
-
-  <div class="col-md-4">
-    <div class="panel panel-success">
-      <div class="panel-heading">TOTAL DRUGS IN STOCK</div>
-      <div class="panel-body">
-        <div class="input-group">
-          <label style="font-size: 48px">456</label>
-        </div>
-      </div>
-    </div>
-  </div>
-
-  <div class="col-md-4">
-    <div class="panel panel-warning">
-      <div class="panel-heading">TOTAL PRESCRIPTIONS</div>
-      <div class="panel-body">
-        <div class="input-group">
-          <label style="font-size: 48px">789</label>
-        </div>
-      </div>
-    </div>
-  </div>
-
-  <div class="col-md-4">
-    <div class="panel panel-danger">
-      <div class="panel-heading">PENDING</div>
-      <div class="panel-body">
-        <div class="input-group">
-          <label style="font-size: 48px">1465</label>
-        </div>
-      </div>
+    <div class="col-sm-12 col-lg-3 col-md-2">
     </div>
   </div>
 </div>

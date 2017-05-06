@@ -1,0 +1,135 @@
+<div>
+  <acme-navbar></acme-navbar>
+</div>
+
+<br>
+<br>
+<br>
+<br>
+
+<div class="container">
+  <div class="row">
+
+    <div class="col-md-12">
+      <div class="panel panel-primary">
+        <div class="panel-heading">SEARCH</div>
+        <div class="panel-body">
+          <div class="input-group">
+            <input type="text" class="form-control custom-control" style="resize: none">
+            <span class="input-group-addon btn btn-warning dropdown-toggle">Select Type</span>
+            <span class="input-group-addon btn btn-primary">SEARCH</span>
+
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="col-sm-6">
+      <div class="panel panel-primary">
+        <div class="panel-heading">REGISTED USERS</div>
+        <div class="panel-body">
+          <div class="table-responsive">
+            <table class="table">
+              <th> Firstname </th>
+              <th> Lastname </th>
+              <th> Username </th>
+              <th> Emp Type</th>
+              <th> Password </th>
+              
+              <tr ng-repeat="user in adduser.users">
+                <td>{{user.firstname}}</td>
+                <td>{{user.lastname}}</td>
+                <td>{{user.username}}</td>
+                <td>{{user.empType}}</td>
+                <td>{{user.password}}</td>                
+              </tr>
+
+            </table>
+          </div>
+          <!--<ul class="list-group">
+            <li class="list-group-item" ng-repeat="user in adduser.users">
+              {{user.email}}
+            </li>
+          </ul>-->
+        </div>
+      </div>
+    </div>
+    <div class="col-sm-6">
+      <div class="panel panel-success">
+        <div class="panel-heading">USER REGISTRATION</div>
+        <div class="panel-body">
+          <form class="form-horizontal" name="register">
+            <fieldset>
+
+              <!-- Form Name -->
+              <legend>Add User</legend>
+
+              <!-- Text input-->
+              <div class="form-group">
+                <label class="col-md-4 control-label" for="textinput">Firstname:</label>
+                <div class="col-md-4">
+                  <input id="textinput" ng-model="adduser.firstname" name="textinput" type="text" placeholder="Firstname" class="form-control input-md" required="">
+
+                </div>
+              </div>
+
+              <div class="form-group">
+                <label class="col-md-4 control-label" for="textinput">Lastname:</label>
+                <div class="col-md-4">
+                  <input id="textinput"ng-model="adduser.lastname" name="textinput" type="text" placeholder="Lastname" class="form-control input-md" required="">
+
+                </div>
+              </div>
+
+              <div class="form-group">
+                <label class="col-md-4 control-label" for="textinput">Employee Type:</label>
+                <div class="col-md-4">
+                  <input id="textinput" ng-model="adduser.empType" name="textinput" type="text" placeholder="Employee Type" class="form-control input-md" required="">
+
+                </div>
+              </div>
+
+              <div class="form-group">
+                <label class="col-md-4 control-label" for="textinput">Username:</label>
+                <div class="col-md-4">
+                  <input id="textinput" ng-model="adduser.username" name="textinput" type="text" placeholder="Username" class="form-control input-md" required="">
+
+                </div>
+              </div>
+
+              <!-- Password input-->
+              <div class="form-group">
+                <label class="col-md-4 control-label" for="passwordinput">Password:</label>
+                <div class="col-md-4">
+                  <input id="passwordinput" name="pwd" type="password" placeholder="Password" class="form-control input-md" required="" ng-model="adduser.pwd">
+
+                </div>
+              </div>
+
+              <div class="form-group">
+                <label class="col-md-4 control-label" for="passwordinput">Confirm Password:</label>
+                <div class="col-md-4">
+                  <input id="passwordinput" name="pwdConfirm" type="password" placeholder="Confirm Password" class="form-control input-md"
+                    required="" compare-to="adduser.pwd" ng-model="adduser.pwdConfirm">
+                </div>
+                <span ng-show="register.pwd.$dirty && register.pwdConfirm.$dirty && register.pwdConfirm.$invalid">Password do not match!</span>
+              </div>
+
+              <!-- Button (Double) -->
+              <div class="form-group">
+                <label class="col-md-4 control-label" for="button1id"></label>
+                <div class="col-md-8">
+                  <button id="button1id" name="button1id" class="btn btn-success" ng-click="adduser.postUser()">Register</button>
+                  <button id="button2id" name="button2id" class="btn btn-info">Clear</button>
+                </div> 
+              </div>
+
+            </fieldset>
+          </form>
+        </div>
+      </div>
+    </div>
+    <div class="col-sm-12 col-lg-3 col-md-2">
+    </div>
+  </div>
+</div>
+</div>
